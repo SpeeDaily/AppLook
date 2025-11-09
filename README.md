@@ -16,7 +16,36 @@ It disables browser quirks, removes unwanted gestures, and makes your Progressiv
 - 🧩 Handles fullscreen orientation for videos (e.g., YouTube, Vimeo).
 - ⚙️ Optional built-in Service Worker registration.
 
+
 ---
+
+## ⚙️ Service Worker Setup
+
+AppLook includes a minimal, editable Service Worker template to help you get started with offline support.
+
+> 🧠 You **must edit this file** to match your project structure!
+
+**Default file:**  
+[`service-worker.js`](./service-worker.js)
+
+### 🔧 What You Should Change:
+- Update `CACHE_NAME` to your app’s version name (e.g., `"MyApp-v1"`).
+- Update the `FILES_TO_CACHE` list with your actual file paths.
+- Replace `/offline.html` with your custom offline page or remove it entirely.
+- (Optional) Add caching strategies for APIs or dynamic data.
+
+Example:
+```js
+const CACHE_NAME = 'MyAwesomeApp-v2';
+const FILES_TO_CACHE = [
+  '/',
+  '/index.html',
+  '/css/main.css',
+  '/js/app.js',
+  '/offline.html'
+];
+---
+
 
 ## ⚡ Quick Usage
 
