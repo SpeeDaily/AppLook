@@ -1,0 +1,33 @@
+/* AppLook.css — Make any PWA feel like a native app */
+
+/* Disable blue tap highlight on mobile links */
+a, img {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* Disable text selection everywhere */
+body, a, img, input, textarea, button {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Remove link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Disable image interactions */
+img {
+  pointer-events: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+/* Prevent pinch zoom but allow scroll and pull-to-refresh */
+html, body {
+  touch-action: manipulation;
+  overscroll-behavior: auto;
+}
